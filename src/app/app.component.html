@@ -1,0 +1,38 @@
+<div>
+<h1>Validate Form</h1>
+    <form [formGroup]="valForm">
+        <div>
+            <label>Name:</label>
+            <input formControlName="name" type="text" class="name_input" placeholder="Enter The Name">
+            <small *ngIf="name.invalid && name.touched" >Name is Required</small> 
+        </div>
+        <label>Gender:</label> <br>
+        <div class="formValidate">
+            <div>
+                <input type="radio" formControlName="gender"  name="fav_language" value="Male">Male<br>                  
+            </div>
+            <div>
+                <input type="radio" formControlName="gender" name="fav_language" value="Female">Female<br>
+            </div>
+            <div>
+                <input type="radio"  formControlName="gender" name="fav_language" value="Others">  Others
+            </div>                  
+        </div>
+        <div>
+            <label>Country:</label>
+            <input formControlName="country" type="text" class="countryInput"  placeholder="Enter Country Name">
+            <small *ngIf="country.invalid && country.touched">country is Required</small> 
+        </div>
+        <div>
+            <label>City:</label>
+            <input formControlName="city" type="text" class="cityInput" placeholder="Enter City Name">
+            <small *ngIf="city.invalid && city.touched">city is Required</small>
+        </div>
+        <div *ngIf="showAge" >
+            <label>Age:</label>
+            <input formControlName="age" type="text" class="ageInput"  placeholder="Enter the Age">
+            <small *ngIf="age.invalid && age.touched">Age is Required</small> 
+        </div>
+        <button (click)="clickSubmit()" [disabled]="valForm.invalid" type="button" class="submitBtn">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,60 @@
+h1{
+    background-color:tomato;
+    color:ghostwhite;
+    padding:15px;
+}
+label{
+    font-size:25px;
+    padding:30px;
+}
+.formValidate{
+    margin-top:-25px;
+    margin-left:150px;
+}
+.countryInput{
+    margin-left: -12px;
+}
+button{
+    padding:10px;
+    margin-left:150px;
+    margin-top:15px;
+    border-radius:5px;
+    outline:transparent;
+}
+input{
+    padding:10px;
+    margin-top:10px;
+    border-radius: 5px;
+}
+.cityInput{
+    margin-left:31px;
+}
+.ageInput{
+    margin-left:30px;
+}
+.name_input{
+    margin-left:8px;
+}
+
+@media screen and (max-width: 320px){
+.name_input{
+    margin-left: 28px;
+}
+.ageInput{
+    margin-left: 28px ;
+}
+.countryInput{
+    margin-left: 28px;
+}
+.formValidate{
+    margin-left:120px;
+}
+.submitBtn{
+    margin-left: 120px;
+    outline:transparent;
+}
+input{
+    border-radius:16px;
+    outline: none;
+}
+}
